@@ -13,7 +13,9 @@ const getAllComments = async (req, res, next) => {
             body: edit
         })
     } catch (err) {
-        next(err)
+        res.status(400).json({
+            message: "Could not get none of the users"
+        })
     }
 }
 
