@@ -66,4 +66,12 @@ VALUES(1, 'Rafid Hossain', 'rafidhosain@pursuit.org', '1995-07-11', 'male', 'new
 (4, 'Javon Fowler', 'javonfowler@pursuit.org', '1994-04-14', 'male', 'no profile pic');
 
 
-INSERT INTO comments(id, )
+INSERT INTO posts (id, user_id, body, time_stamp)
+VALUES (1, 1, "Hey I am here and I am happy",'1994-04-14'), (2, 2, "HeY guess what",'1994-04-14'),
+(3,3,"awwman JS is not BS", '1994-04-14'),(4,4,"I am trying so hard to be the man up in here", '1994-04-14');
+
+INSERT INTO albums (id, user_id, album_name, thumbnail, time_stamp)
+VALUES (1, 1, "DZ Ntz", "yer", '1994-04-14'),(2,2,"yerr","uptown",'1994-04-14'),(3,3,"ya tu sabes","i want to leave",'1994-04-14'),
+(4,4,"downtown", "brokies",'1994-04-14');
+
+-- INSERT INTO pictures (id, album_id, photo_url, time_stamp)
