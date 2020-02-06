@@ -28,7 +28,9 @@ const getSingleComment = async (req, res, next) => {
             body: singleComment
         })
     } catch (err) {
-        next(err)
+        res.status(400).json({
+            message: "could not get single comment"
+        })
     }
 }
 
