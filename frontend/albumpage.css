@@ -1,0 +1,36 @@
+html{
+    height: 100vh;
+    background-color: white;
+}
+body{
+    margin:0px
+}
+header{
+    background-color:rgb(38, 94, 12);
+    /* border-style: solid; */
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: baseline;
+     /* padding-top: 15px;  */
+    margin: auto;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
+
+ #myProfile{
+    color: black;
+    margin-top: 30px;
+}
+
+
+#myPhotos{
+    color: black;
+    
+}
+
+/* #mainMenu{
+    margin-top: 10%;
+} */
