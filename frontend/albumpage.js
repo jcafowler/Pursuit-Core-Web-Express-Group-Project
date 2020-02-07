@@ -13,12 +13,32 @@ try{
         thumbnail: "",
         time_stamp: "",
     })
-    debugger
+    
 }catch(err){
     console.log(err)
 }
 
 })
 
+let user_id = 1
+let button = document.querySelector("#getAlbum")
+button.addEventListener("click",async()=>{
+let ul  = document.querySelector("ul")
+ul.innerHTML= ""
+    try{
+        let res = await axios.get(`http://localhost:3000/albums/${user_id}`)
+        list = res.data.body
+        list.forEach(album =>{
+
+            let li = document.createElement("li")
+            li.innerText = album.album_name
+            
+            ul.appendChild(li)
+        })
+        
+    }catch(err){
+        console.log(err)
+    }
+})
 
 })
