@@ -58,4 +58,3 @@ CREATE TABLE pictures(
     photo_url text,
     time_stamp timestamp DEFAULT CURRENT_TIMESTAMP
 );
-;
