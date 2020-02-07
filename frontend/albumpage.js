@@ -31,7 +31,7 @@ ul.innerHTML= ""
         list.forEach(album =>{
 
             let li = document.createElement("li")
-            li.innerText = album.album_name
+            li.innerHTML = album.album_name
             
             ul.appendChild(li)
         })
