@@ -6,10 +6,9 @@ newUser.addEventListener("submit",async(e)=>{
     let email = document.querySelector("#email")
     let birthday = document.querySelector("#dateOfBirth")
     let gender = document.querySelector("#gender")
-    let testFunction = document.querySelector("#testFunction")
+   // let testFunction = document.querySelector("#testFunction")
     try{
         let res = await axios.post("http://localhost:3000/users",{
-            
             full_name:fullName.value,
             email: email.value,
             date_of_birth:birthday.value,
@@ -17,8 +16,7 @@ newUser.addEventListener("submit",async(e)=>{
             profile_pic:"None set",
             join_date: ""
 
-        })
-        debugger
+        })      
        fullName.value = ""
        email.value = ""
        birthday.value = ""
