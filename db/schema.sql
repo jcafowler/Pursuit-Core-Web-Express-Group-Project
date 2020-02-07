@@ -59,8 +59,3 @@ CREATE TABLE pictures(
     time_stamp timestamp DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO users(id, full_name, email, date_of_birth, gender, profile_pic)
-VALUES(1, 'Rafid Hossain', 'rafidhosain@pursuit.org', '1995-07-11', 'male', 'new profile pic'),
-(2, 'Henry Nunez', 'henrynunez@pursuit.org', '1991-10-11','male', 'no profile pic'),
-(3, 'Cassidy Beni', 'cassidybeni@pursuit.org', '1996-11-01', 'female', 'no profile pic'),
-(4, 'Javon Fowler', 'javonfowler@pursuit.org', '1994-04-14', 'male', 'no profile pic')

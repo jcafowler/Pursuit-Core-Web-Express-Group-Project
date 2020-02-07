@@ -1,20 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-let form = document.querySelector("#albumForm")
-form.addEventListener("submit",async(e)=>{
-    e.preventDefault
-    debugger
+let newAlbums = document.querySelector("#new")
+let retrieve = document.querySelector("#getAlbum")
+let albumForm = document.querySelector("#newAlbum")
+albumForm.addEventListener("submit",async(e)=>{
+
+    e.preventDefault()
 let createAlbum = document.querySelector("#createAlbum")
 try{
-    let h3 = document.querySelector("h3")
     let res = await axios.post("http://localhost:3000/albums/:owner_id",{
+        user_id: 1,
         album_name: createAlbum.value,
-        user_id:"",
-        thumnbnail: "",
+        thumbnail: "",
         time_stamp: "",
     })
-    h3.innerText= createAlbum
-
-  
+    debugger
 }catch(err){
     console.log(err)
 }
