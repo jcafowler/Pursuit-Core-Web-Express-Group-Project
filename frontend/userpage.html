@@ -7,22 +7,39 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="userpage.js"></script>
     <link rel="stylesheet" href="userpage.css">
-    <title>Single User</title>
+    <title id="pageTitle">Profile Page</title>
 </head>
 <body>
-<div id="userPage">
-    <div id="navBar">
-        <a href="./userpage.html" id="myProfile">My Profile</a>
-        <a href="./albumpage.html" id="myAlbum">My Albums</a>
-            <form>
-                <input type="text" placeholder="search" id="searchBar">
-                <button id="searchBtn">GO!</button>
+    <div id="userContent">
+        <div id="navBar">
+            <a href="./userpage.html" id="myProfile">My Profile</a>
+            <a href="./albumpage.html" id="myAlbum">My Albums</a>
+                <form>
+                    <i class="icon" id="searchIcon"><img src="../frontend/Media/icons8-search-10.png" alt=""></i>
+                    <input type="text" placeholder="Search"id="searchBar">
+                    <button id="searchBtn">GO!</button>
+                </form>
+            <a href="https://github.com/joinpursuit"><img src="../frontend/Media/GitHub-Mark-32px.png" alt="My Github page"></a>
+            <a href="https://linkedin.com"><img src="../frontend/Media/icons8-linkedin-32.png" alt="My LinkedIn page"></a>
+        
+        </div>
+        <div id="profilePic"></div>
+        <div id="userInfo">
+            <p id="name"></p>
+            <p id="email"></p>
+            <p id="birthday"></p>
+            <p id="gender"></p>
+            <p id="memberSince"></p>
+        </div>
+        <div id="postsSection">
+            <form id="postForm">
+                <input type="text" name="newPostBody" id="newPostBody" placeholder="What's on your mind?">
+                <button type="submit" id="postButton">Post</button>
             </form>
-        <a href="https://github.com/joinpursuit">github photo belongs here</a>
-        <a href="https://linkedin.com">linkedin photo belongs here</a>
-    
-    <div>
-    
+            <div id="existingPosts"></div>
+        </div>
+    </div>
+<!--     
     <div class=statusDiv>
         <input type="text">
         <button>Post Status</button>
@@ -59,7 +76,7 @@
     </div>
 
     </div>
-</div>
+</div> -->
 
 
 

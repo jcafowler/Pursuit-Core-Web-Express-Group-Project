@@ -15,7 +15,9 @@
         width: 100%;
         justify-content: space-evenly;
 }
-
-.userInfo{
-    
+.posts {
+    border: 1px solid black;
+}
+#newPostBody {
+    width: 50%;
 }
