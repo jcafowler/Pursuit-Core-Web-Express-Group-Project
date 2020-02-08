@@ -34,6 +34,19 @@ const getSinglePost = async (req, res, next) =>{
         next(err)
     }
 }
+const getAllUserPosts = async (req, res, next) => {
+    try{
+        let posts = await db.any ("SELECT users.full_name, posts.body, posts.time_stamp FROM users JOIN posts ON users.id = posts.user_id WHERE users.id = $1", req.params.user_id)
+        res.status(200).json({
+            status: "success",
+            message: "These are all posts by the target user.",
+            body: posts
+        })
+
+    }catch(err){
+        next(err)
+    }
+}
 
 const registerPosts = async (req, res, next) =>{
     try{
@@ -92,4 +105,4 @@ const editPost = async (req, res, next)=>{
 
 
 
-module.exports = {getAllPosts, getSinglePost, registerPosts, deletePost, editPost}
+module.exports = {getAllPosts, getSinglePost, registerPosts, deletePost, editPost, getAllUserPosts}

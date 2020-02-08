@@ -1,9 +1,11 @@
 const posts = require("express").Router()
-const {getAllPosts, getSinglePost, registerPosts, deletePost, editPost} = require("../../queries/posts.js")
+const {getAllPosts, getSinglePost, registerPosts, deletePost, editPost, getAllUserPosts} = require("../../queries/posts.js")
 
 posts.get("/", getAllPosts)
 
 posts.get("/:post_id", getSinglePost)
+
+posts.get("/users/:user_id", getAllUserPosts)
 
 posts.post("/", registerPosts)
 
