@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     getPosts()
     postForm.addEventListener ("submit", async (e) => {
         e.preventDefault()
+        debugger
         let body = document.querySelector("#newPostBody").value
          await makePost({user_id: 1, body})
         postForm.reset()

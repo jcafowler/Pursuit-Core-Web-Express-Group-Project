@@ -32,7 +32,7 @@
             <p id="memberSince"></p>
         </div>
         <div id="postsSection">
-            <form id="postForm">
+            <form id="postForm" onsubmit="setTimeout(function(){window.location.reload();},10)">
                 <input type="text" name="newPostBody" id="newPostBody" placeholder="What's on your mind?">
                 <button type="submit" id="postButton">Post</button>
             </form>
