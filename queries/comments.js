@@ -13,7 +13,9 @@ const getAllComments = async (req, res, next) => {
             body: edit
         })
     } catch (err) {
-        next(err)
+        res.status(400).json({
+            message: "Could not get none of the users"
+        })
     }
 }
 
@@ -26,7 +28,9 @@ const getSingleComment = async (req, res, next) => {
             body: singleComment
         })
     } catch (err) {
-        next(err)
+        res.status(400).json({
+            message: "could not get single comment"
+        })
     }
 }
 
@@ -39,7 +43,10 @@ const editSingleComment = async (req, res, next) => {
             body: editComment
         })
     } catch (err) {
-        next(err)
+        res.status(400).json({
+            message: "Could not get user",
+        })
+        
     }
 }
 
@@ -53,7 +60,9 @@ const deleteSingleComments = async (req, res, next) => {
         })
 
     } catch (err) {
-        next(err)
+        res.status(400).json({
+            message:'Could not delete Users'
+        })
     }
 }
 
@@ -66,7 +75,9 @@ const addComment = async(req, res, next) =>{
             body: addComment
         })
     }catch(err){
-        next(err)
+        res.status(400).json({
+            message: "No comment was not made"
+        })
     }
 }
 module.exports = { getAllComments, getSingleComment, editSingleComment, deleteSingleComments, addComment };
