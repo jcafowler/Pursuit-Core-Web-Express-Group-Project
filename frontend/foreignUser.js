@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async()=>{
         p5.innerText = res.data.body.join_date;
         debugger
     }catch(err){
-        
+        next(err)
     }
 
     let ownerId = 1;
@@ -28,8 +28,20 @@ document.addEventListener("DOMContentLoaded", async()=>{
 
     try{
         let res = await axios.get(`http://localhost:3000/albums/${ownerId}`);
+        let photoArr = [];
+        let photoImg = res.data.body;
+        for(let i = 0; i < photoImg.length; i ++){
+            photoArr.push(i)
+            //preview of the imgs
+            if(i === 5) break;
+        }
+        photoArr.forEach(el =>{
+            
+        })
 
-        debugger
+        debugger;
+
+
     }catch(err){
         next(err)
     }
